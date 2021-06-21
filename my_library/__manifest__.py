@@ -22,8 +22,9 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        # 'security/groups.xml',
+        # groups.xml vient avant ir.model.access.csv sinon une exception sera levee
+        'security/groups.xml'
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
         'views/library_book.xml',
