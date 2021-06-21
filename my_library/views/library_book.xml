@@ -20,9 +20,19 @@
                     <group>
                         <field name="name"/>
                         <field name="author_ids" widget="many2many_tags"/>
+                        <field name="state"/>
+                        <field name="pages"/>
+                        <field name="notes"/>
                     </group>
                     <group>
+                        <field name="short_name"/>
                         <field name="date_release"/>
+                        <field name="date_updated"/>
+                        <field name="cover" widget="image" class="oe_avater"/>
+                        <field name="reader_rating"/>
+                    </group>
+                    <group>
+                        <fields name="description"/>
                     </group>
                 </group>
             </form>
@@ -34,7 +44,7 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <tree>
-                <field  name="name"/>
+                <field name="name"/>
                 <field name="date_release"/>
             </tree>
         </field>
